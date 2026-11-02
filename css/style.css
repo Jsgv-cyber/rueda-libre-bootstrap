@@ -221,3 +221,133 @@ footer p {
         max-width: 320px;
     }
 }
+
+/* =================================
+   1. CONFIGURACIÓN GENERAL
+================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eef3ee;
+    color: #26352b;
+    line-height: 1.6;
+}
+
+/* =================================
+   2. COLORES PRINCIPALES
+================================= */
+
+:root {
+    --verde-principal: #245c42;
+    --verde-oscuro: #19432f;
+    --verde-claro: #dce9df;
+    --fondo: #eef3ee;
+    --texto: #26352b;
+    --blanco: #ffffff;
+}
+
+/* =================================
+   3. IMÁGENES RESPONSIVE
+================================= */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* =================================
+   4. ENCABEZADOS
+================================= */
+
+h1, h2, h3, h4 {
+    color: var(--verde-principal);
+    font-weight: bold;
+}
+
+/* =================================
+   5. BOTONES PERSONALIZADOS
+================================= */
+
+.btn-success {
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
+}
+
+.btn-success:hover {
+    background-color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
+}
+
+/* =================================
+   6. TARJETAS
+================================= */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: contain;
+    padding: 15px;
+    background-color: #f5f7f5;
+}
+
+.card-title {
+    color: var(--verde-principal);
+    font-weight: bold;
+}
+
+/* =================================
+   7. RESPONSIVE
+================================= */
+
+/* Celulares */
+@media (max-width: 576px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 991px) {
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+/* Computadores */
+@media (min-width: 992px) {
+
+    h1 {
+        font-size: 2.8rem;
+    }
+
+}
