@@ -135,8 +135,21 @@ section h2 {
 .lista-tarifas {
     max-width: 520px;
     margin: 0 auto;
-    padding-left: 24px;
+    padding-right: 24px;
 }
+
+p {
+    text-align: center;
+}
+
+ .lista-tarifas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
 
 .lista-tarifas li {
     margin: 8px 0;
@@ -184,6 +197,12 @@ button:hover {
     font-size: 0.9rem;
     color: #526257;
 }
+
+.btn-enviar {
+  display: block;      /* Obligatorio para que funcione el margen automático */
+  margin: 30px auto;   /* El 'auto' izquierdo y derecho lo empuja justo al centro */
+}
+
 
 footer {
     padding: 18px;
