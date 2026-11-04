@@ -1,37 +1,66 @@
-/* Estilos generales */
-* {
-    box-sizing: border-box;
+/* =========================================
+   1. VARIABLES DE COLOR Y CONFIGURACIÓN
+========================================= */
+:root {
+    --verde-principal: #245c42;
+    --verde-oscuro: #1b3929;
+    --verde-hover: #367653;
+    --verde-claro: #dce9df;
+    --fondo: #eef3ee;
+    --texto: #26352b;
+    --blanco: #ffffff;
 }
+
+/* Bootstrap ya incluye Reboot; aquí solo fijamos el modelo de caja. */
+* { box-sizing: border-box; }
+
+/* =========================================
+   2. ESTILOS GENERALES
+========================================= */
+html { scroll-behavior: smooth; }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #eef3ee;
-    color: #26352b;
+    background-color: var(--fondo);
+    color: var(--texto);
 }
 
-header {
-    background-color: #245c42;
-    color: #ffffff;
-    text-align: center;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3 { font-weight: bold; }
+p { text-align: center; }
+
+/* =========================================
+   3. ENCABEZADO
+========================================= */
+.encabezado {
     padding: 30px 20px;
+    background-color: var(--verde-principal);
+    color: var(--blanco);
+    text-align: center;
 }
 
-header h1 {
+.encabezado h1 {
     margin: 0 0 8px;
+    color: var(--blanco);
 }
 
-header p {
-    margin: 0;
-}
+.encabezado p { margin: 0; }
 
-/* Barra horizontal de navegación */
+/* =========================================
+   4. MENÚ DE NAVEGACIÓN
+========================================= */
 .menu-principal {
     position: sticky;
     top: 0;
-    z-index: 100;
-    background-color: #1b3929;
+    z-index: 1020;
+    background-color: var(--verde-oscuro);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
@@ -49,7 +78,7 @@ header p {
 .menu-principal a {
     display: block;
     padding: 14px 18px;
-    color: #ffffff;
+    color: var(--blanco);
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.2s ease;
@@ -57,53 +86,46 @@ header p {
 
 .menu-principal a:hover,
 .menu-principal a:focus-visible {
-    background-color: #367653;
+    background-color: var(--verde-hover);
     outline: none;
 }
 
-/* Evita que el menú tape el título al saltar a una sección */
-section {
-    scroll-margin-top: 76px;
+section { scroll-margin-top: 76px; }
+
+/* =========================================
+   5. CONTENIDO Y SECCIONES
+========================================= */
+main.container {
+    max-width: 1100px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
-main {
-    width: min(1100px, 100% - 32px);
-    margin: 0 auto;
-}
-
-section {
+main section {
     margin: 24px 0;
     padding: 24px;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.65);
     border-radius: 12px;
 }
 
-section h2 {
+main section h2 {
     margin-top: 0;
-    color: #245c42;
+    margin-bottom: 18px;
+    color: var(--verde-principal);
     text-align: center;
 }
 
-#catalogo {
-    text-align: center;
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    margin-top: 24px;
-}
+/* =========================================
+   6. CATÁLOGO DE BICICLETAS
+========================================= */
+/* .row y las clases .col-* de Bootstrap controlan la distribución. */
+.galeria { margin-top: 24px; }
 
 .bici-card {
-    flex: 0 1 250px;
-    width: 250px;
     padding: 15px;
-    background-color: #ffffff;
     border: 1px solid #d5dfd6;
     border-radius: 12px;
+    background-color: var(--blanco);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     text-align: center;
 }
@@ -122,40 +144,41 @@ section h2 {
 .imagen-bici img {
     width: 200px;
     max-width: 100%;
-    height: auto;
+    height: 180px;
     object-fit: contain;
-    display: block;
 }
 
 .bici-card h3 {
-    color: #245c42;
+    margin-top: 16px;
+    color: var(--verde-principal);
     line-height: 1.3;
 }
 
+.bici-card p { margin-bottom: 0; }
+
+/* =========================================
+   7. TARIFAS
+========================================= */
 .lista-tarifas {
-    max-width: 520px;
-    margin: 0 auto;
-    padding-right: 24px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 20px auto 0;
+    padding: 0;
+    list-style: none;
 }
-
-p {
-    text-align: center;
-}
-
- .lista-tarifas {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
 
 .lista-tarifas li {
     margin: 8px 0;
+    padding: 10px 14px;
+    background-color: var(--blanco);
+    border-radius: 8px;
 }
 
+/* =========================================
+   8. FORMULARIO DE RESERVA
+========================================= */
 form {
+    width: 100%;
     max-width: 520px;
     margin: 0 auto;
 }
@@ -167,28 +190,24 @@ form {
     margin-bottom: 16px;
 }
 
-input,
-select {
-    width: 100%;
-    padding: 11px;
-    font: inherit;
-    border: 1px solid #b9c8bb;
-    border-radius: 6px;
-    background-color: #ffffff;
+.campo-formulario label { font-weight: bold; }
+.campo-formulario .form-control,
+.campo-formulario .form-select { width: 100%; }
+
+.btn-success {
+    background-color: var(--verde-principal);
+    border-color: var(--verde-principal);
 }
 
-button {
-    padding: 12px 18px;
-    font: inherit;
-    color: #ffffff;
-    background-color: #245c42;
-    border: 0;
-    border-radius: 6px;
-    cursor: pointer;
+.btn-success:hover,
+.btn-success:focus {
+    background-color: var(--verde-oscuro);
+    border-color: var(--verde-oscuro);
 }
 
-button:hover {
-    background-color: #17442f;
+.btn-enviar {
+    display: block;
+    margin: 24px auto 0;
 }
 
 .nota-formulario {
@@ -198,175 +217,63 @@ button:hover {
     color: #526257;
 }
 
-.btn-enviar {
-  display: block;      /* Obligatorio para que funcione el margen automático */
-  margin: 30px auto;   /* El 'auto' izquierdo y derecho lo empuja justo al centro */
-}
-
-
+/* =========================================
+   9. PIE DE PÁGINA
+========================================= */
 footer {
     padding: 18px;
+    color: var(--blanco);
+    background-color: var(--verde-oscuro);
     text-align: center;
-    color: #ffffff;
-    background-color: #1b3929;
 }
 
-footer p {
-    margin: 0;
-}
+footer p { margin: 0; }
 
-@media (max-width: 600px) {
+/* =========================================
+   10. RESPONSIVE: CELULARES
+========================================= */
+@media (max-width: 575.98px) {
+    .encabezado { padding: 24px 14px; }
+    .encabezado h1 { font-size: 1.65rem; }
+    .encabezado p { font-size: 0.95rem; }
+
     .menu-principal ul {
         gap: 0;
         padding: 4px;
     }
 
     .menu-principal a {
-        padding: 10px 11px;
-        font-size: 0.92rem;
+        padding: 10px 9px;
+        font-size: 0.88rem;
     }
 
-    main {
-        width: calc(100% - 20px);
+    main.container {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 
-    section {
-        padding: 18px;
+    main section {
+        margin: 16px 0;
+        padding: 18px 14px;
     }
 
-    .bici-card {
-        flex-basis: 100%;
-        width: 100%;
-        max-width: 320px;
-    }
+    .imagen-bici { min-height: 180px; }
+    .imagen-bici img { height: 160px; }
+    .lista-tarifas { width: 100%; }
+    .lista-tarifas li { text-align: center; }
 }
 
-/* =================================
-   1. CONFIGURACIÓN GENERAL
-================================= */
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* =========================================
+   11. RESPONSIVE: TABLETS
+========================================= */
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .encabezado h1 { font-size: 2.2rem; }
+    main section { padding: 22px; }
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #eef3ee;
-    color: #26352b;
-    line-height: 1.6;
-}
-
-/* =================================
-   2. COLORES PRINCIPALES
-================================= */
-
-:root {
-    --verde-principal: #245c42;
-    --verde-oscuro: #19432f;
-    --verde-claro: #dce9df;
-    --fondo: #eef3ee;
-    --texto: #26352b;
-    --blanco: #ffffff;
-}
-
-/* =================================
-   3. IMÁGENES RESPONSIVE
-================================= */
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-}
-
-/* =================================
-   4. ENCABEZADOS
-================================= */
-
-h1, h2, h3, h4 {
-    color: var(--verde-principal);
-    font-weight: bold;
-}
-
-/* =================================
-   5. BOTONES PERSONALIZADOS
-================================= */
-
-.btn-success {
-    background-color: var(--verde-principal);
-    border-color: var(--verde-principal);
-}
-
-.btn-success:hover {
-    background-color: var(--verde-oscuro);
-    border-color: var(--verde-oscuro);
-}
-
-/* =================================
-   6. TARJETAS
-================================= */
-
-.card {
-    border: none;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.card-img-top {
-    height: 220px;
-    object-fit: contain;
-    padding: 15px;
-    background-color: #f5f7f5;
-}
-
-.card-title {
-    color: var(--verde-principal);
-    font-weight: bold;
-}
-
-/* =================================
-   7. RESPONSIVE
-================================= */
-
-/* Celulares */
-@media (max-width: 576px) {
-
-    body {
-        font-size: 14px;
-    }
-
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    .card-img-top {
-        height: 180px;
-    }
-}
-
-/* Tablets */
-@media (min-width: 577px) and (max-width: 991px) {
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .card-img-top {
-        height: 200px;
-    }
-}
-
-/* Computadores */
+/* =========================================
+   12. RESPONSIVE: COMPUTADORES
+========================================= */
 @media (min-width: 992px) {
-
-    h1 {
-        font-size: 2.8rem;
-    }
-
+    .encabezado h1 { font-size: 2.8rem; }
 }
