@@ -54,8 +54,9 @@ p { text-align: center; }
 .encabezado p { margin: 0; }
 
 /* =========================================
-   4. MENÚ DE NAVEGACIÓN
+   4. MENÚ DE NAVEGACIÓN RESPONSIVE
 ========================================= */
+
 .menu-principal {
     position: sticky;
     top: 0;
@@ -90,14 +91,33 @@ p { text-align: center; }
     outline: none;
 }
 
-section { scroll-margin-top: 76px; }
+/* Menú vertical en celulares */
+@media (max-width: 575.98px) {
+
+    .menu-principal ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 5px;
+    }
+
+    .menu-principal li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu-principal a {
+        padding: 10px;
+    }
+
+}
+
 
 /* =========================================
    5. CONTENIDO Y SECCIONES
 ========================================= */
 main.container {
     max-width: 1100px;
-    padding-top: 1px;
+    padding-top: 5px;
     padding-bottom: 1px;
 }
 
@@ -119,7 +139,10 @@ main section h2 {
    6. CATÁLOGO DE BICICLETAS
 ========================================= */
 /* .row y las clases .col-* de Bootstrap controlan la distribución. */
-.galeria { margin-top: 24px; }
+.galeria {
+    margin-top: 24px;
+}
+
 
 .bici-card {
     padding: 15px;
@@ -128,6 +151,8 @@ main section h2 {
     background-color: var(--blanco);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.10);
     text-align: center;
+    
+    
 }
 
 .imagen-bici {
@@ -139,6 +164,7 @@ main section h2 {
     background-color: #f5f7f5;
     border: 1px solid #dce4dc;
     border-radius: 8px;
+    
 }
 
 .imagen-bici img {
@@ -146,15 +172,20 @@ main section h2 {
     max-width: 100%;
     height: 180px;
     object-fit: contain;
+    
 }
 
 .bici-card h3 {
     margin-top: 16px;
     color: var(--verde-principal);
     line-height: 1.3;
+    
+    
 }
 
 .bici-card p { margin-bottom: 0; }
+
+
 
 /* =========================================
    7. TARIFAS
@@ -206,9 +237,11 @@ form {
 }
 
 .btn-enviar {
-    display: block;
+    display: flex;
     margin: 24px auto 0;
 }
+
+
 
 .nota-formulario {
     max-width: 520px;
@@ -229,51 +262,9 @@ footer {
 
 footer p { margin: 0; }
 
-/* =========================================
-   10. RESPONSIVE: CELULARES
-========================================= */
-@media (max-width: 575.98px) {
-    .encabezado { padding: 24px 14px; }
-    .encabezado h1 { font-size: 1.65rem; }
-    .encabezado p { font-size: 0.95rem; }
 
-    .menu-principal ul {
-        gap: 0;
-        padding: 4px;
-    }
 
-    .menu-principal a {
-        padding: 10px 9px;
-        font-size: 0.88rem;
-    }
 
-    main.container {
-        padding-left: 10px;
-        padding-right: 10px;
-    }
 
-    main section {
-        margin: 16px 0;
-        padding: 18px 14px;
-    }
 
-    .imagen-bici { min-height: 180px; }
-    .imagen-bici img { height: 160px; }
-    .lista-tarifas { width: 100%; }
-    .lista-tarifas li { text-align: center; }
-}
 
-/* =========================================
-   11. RESPONSIVE: TABLETS
-========================================= */
-@media (min-width: 576px) and (max-width: 991.98px) {
-    .encabezado h1 { font-size: 2.2rem; }
-    main section { padding: 22px; }
-}
-
-/* =========================================
-   12. RESPONSIVE: COMPUTADORES
-========================================= */
-@media (min-width: 992px) {
-    .encabezado h1 { font-size: 2.8rem; }
-}

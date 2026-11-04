@@ -7,13 +7,14 @@
     <title>Rueda Libre | Alquiler de bicicletas en Medellín</title>
 
     <!-- Bootstrap: una sola versión -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-          crossorigin="anonymous">
+    
 
     <!-- Estilos propios: deben ir después de Bootstrap -->
     <link rel="stylesheet" href="css/style.css">
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
 </head>
 <body>
 
@@ -23,6 +24,7 @@
     </header>
 
     <nav class="menu-principal" aria-label="Navegación principal">
+        
         <ul>
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="#quienes-somos">Quiénes somos</a></li>
@@ -30,12 +32,16 @@
             <li><a href="#tarifas">Tarifas</a></li>
             <li><a href="#reserva">Reservar</a></li>
         </ul>
+
+        
     </nav>
 
     <main class="container">
         <section id="quienes-somos">
             <h2>Quiénes somos</h2>
-            <p>En <strong>Rueda Libre</strong> somos apasionados por la movilidad sostenible en Medellín. Ofrecemos el servicio de alquiler de bicicletas urbanas, de montaña y de ruta para que locales y turistas exploren la ciudad a su propio ritmo, de forma ecológica y divertida.</p>
+            <p>En <strong>Rueda Libre</strong> somos apasionados por la movilidad sostenible en Medellín. 
+                Ofrecemos el servicio de alquiler de bicicletas urbanas, de montaña y de ruta para que locales y 
+                turistas exploren la ciudad a su propio ritmo, de forma ecológica y divertida.</p>
         </section>
 
         <section id="catalogo">
@@ -43,31 +49,59 @@
             <p>Conoce los diferentes modelos que tenemos disponibles para ti:</p>
 
             <!-- Bootstrap adapta el catálogo: 1 columna en celular, 2 en tablet y 3 en computador -->
-            <div class="galeria row g-4">
-                <article class="bici-card card h-100 col-12 col-md-6 col-lg-4">
-                    <div class="imagen-bici">
-                        <img src="img/Bicilceta 1.webp" class="img-fluid" alt="Bicicleta de montaña GW color negro" width="200">
-                    </div>
-                    <h3>MTB GW Negra</h3>
-                    <p>Bicicleta de montaña con suspensión delantera, ideal para terreno variado y ciclovías exigentes.</p>
-                </article>
+       <div class="galeria row g-4">
 
-                <article class="bici-card card h-100 col-12 col-md-6 col-lg-4">
-                    <div class="imagen-bici">
-                        <img src="img/Bicicleta 2.webp" class="img-fluid" alt="Bicicleta de montaña GW color beige" width="200">
-                    </div>
-                    <h3>MTB GW beige</h3>
-                    <p>Modelo todoterreno cómodo y elegante para pasear por la ciudad con total suavidad.</p>
-                </article>
+    <div class="col-12 col-md-6 col-lg-4">
+        <article class="bici-card card h-100">
 
-                <article class="bici-card card h-100 col-12 col-md-6 col-lg-4">
-                    <div class="imagen-bici">
-                        <img src="img/Bicicleta 3.jpeg" class="img-fluid" alt="Bicicleta de ruta de color rojo y blanco" width="200">
-                    </div>
-                    <h3>Bicicleta de ruta con un estilo único</h3>
-                    <p>Diseñada para velocidad y alto rendimiento sobre el asfalto. Perfecta para deportistas.</p>
-                </article>
+            <div class="imagen-bici">
+                <img src="img/Bicilceta 1.webp"
+                     class="img-fluid"
+                     alt="Bicicleta de montaña GW color negro">
             </div>
+
+            <h3>MTB GW Negra</h3>
+
+            <p>Bicicleta de montaña con suspensión delantera, ideal para terreno variado y ciclovías exigentes.</p>
+
+        </article>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <article class="bici-card card h-100">
+
+            <div class="imagen-bici">
+                <img src="img/Bicicleta 2.webp"
+                     class="img-fluid"
+                     alt="Bicicleta de montaña GW color beige">
+            </div>
+
+            <h3>MTB GW beige</h3>
+
+            <p>Modelo todoterreno cómodo y elegante para pasear por la ciudad con total suavidad.</p>
+
+        </article>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4">
+        <article class="bici-card card h-100">
+
+            <div class="imagen-bici">
+                <img src="img/Bicicleta 3.jpeg"
+                     class="img-fluid"
+                     alt="Bicicleta de ruta de color rojo y blanco">
+            </div>
+
+            <h3>Bicicleta de ruta con un estilo único</h3>
+
+            <p>Diseñada para velocidad y alto rendimiento sobre el asfalto. Perfecta para deportistas.</p>
+
+        </article>
+    </div>
+
+</div>
+
+
         </section>
 
         <section id="tarifas">
@@ -82,30 +116,82 @@
 
         <section id="reserva">
             <h2>Reserva tu bicicleta</h2>
-            <p>Completa tus datos y nos pondremos en contacto contigo para confirmar tu alquiler:</p>
+            <p>Completa tus datos para solicitar el alquiler de tu bicicleta.</p>
 
-            <form action="#" method="get">
-                <div class="campo-formulario">
-                    <label for="nombre">Nombre completo:</label>
-                    <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name" required>
-                </div>
+<div class="text-center mb-4">
+    <button class="btn btn-success"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#formularioReserva"
+            aria-expanded="false"
+            aria-controls="formularioReserva">
+        Realizar reserva
+    </button>
+</div>
 
-                <div class="campo-formulario">
-                    <label for="bici-select">Selecciona el modelo:</label>
-                    <select class="form-select" id="bici-select" name="bici" required>
-                        <option value="" selected disabled>Selecciona una bicicleta</option>
-                        <option value="mtb-negra">MTB GW Negra</option>
-                        <option value="mtb-beige">MTB GW beige</option>
-                        <option value="ruta">Bicicleta de ruta</option>
-                    </select>
-                </div>
+<div class="collapse" id="formularioReserva">
 
-                <div class="campo-formulario">
-                    <label for="fecha">Fecha de alquiler:</label>
-                    <input class="form-control" type="date" id="fecha" name="fecha" required>
-                </div>
+    <form action="#" method="get">
 
-                <button class="btn btn-success btn-enviar" type="submit">Enviar reserva</button>
+        <div class="campo-formulario">
+            <label for="nombre">Nombre completo:</label>
+            <input class="form-control" type="text" id="nombre"
+                   name="nombre" placeholder="Tu nombre completo"
+                   autocomplete="name" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="correo">Correo electrónico:</label>
+            <input class="form-control" type="email" id="correo"
+                   name="correo" placeholder="ejemplo@correo.com"
+                   autocomplete="email" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="documento">Número de documento:</label>
+            <input class="form-control" type="text" id="documento"
+                   name="documento" placeholder="Ingresa tu documento"
+                   required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="celular">Número de celular:</label>
+            <input class="form-control" type="tel" id="celular"
+                   name="celular" placeholder="Ejemplo: 3001234567"
+                   autocomplete="tel" required>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="bici-select">Selecciona el modelo:</label>
+            <select class="form-select" id="bici-select"
+                    name="bici" required>
+                <option value="" selected disabled>
+                    Selecciona una bicicleta
+                </option>
+                <option value="mtb-negra">MTB GW Negra</option>
+                <option value="mtb-beige">MTB GW beige</option>
+                <option value="ruta">Bicicleta de ruta</option>
+            </select>
+        </div>
+
+        <div class="campo-formulario">
+            <label for="fecha">Fecha de alquiler:</label>
+            <input class="form-control" type="date" id="fecha"
+                   name="fecha" required>
+        </div>
+
+        <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-success btn-enviar" type="submit">
+                Enviar reserva
+            </button>
+        </div>
+
+    </form>
+
+</div>
+
+
+                
             </form>
             <p class="nota-formulario">Nota: este formulario todavía no envía la reserva a un negocio; necesita conectarse a un servicio o backend para recibir los datos.</p>
         </section>
@@ -114,6 +200,7 @@
     <footer>
         <p>&copy; 2026 Rueda Libre | Medellín, Colombia</p>
     </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 
 </body>
 </html>
