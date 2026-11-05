@@ -262,7 +262,42 @@ footer {
 
 footer p { margin: 0; }
 
+/* =========================================
+   10. CARRUSEL DE BICICLETAS
+========================================= */
+.carrusel-bicis {
+    margin-top: 24px;
+    padding: 0 50px;            /* espacio lateral para las flechas */
+}
 
+.carrusel-bicis .carousel-control-prev,
+.carrusel-bicis .carousel-control-next {
+    width: 48px;
+    opacity: 1;
+}
+
+/* Solo la flecha, en verde y sin círculo */
+.carrusel-bicis .carousel-control-prev-icon,
+.carrusel-bicis .carousel-control-next-icon {
+    width: 32px;
+    height: 32px;
+    background-size: 100% 100%;
+    background-color: transparent;
+}
+
+.carrusel-bicis .carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23245c42' stroke='%23245c42' stroke-width='1.2'><path d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/></svg>");
+}
+
+.carrusel-bicis .carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23245c42' stroke='%23245c42' stroke-width='1.2'><path d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+}
+
+/* Al pasar el mouse, la flecha se oscurece */
+.carrusel-bicis .carousel-control-prev:hover .carousel-control-prev-icon,
+.carrusel-bicis .carousel-control-next:hover .carousel-control-next-icon {
+    filter: brightness(0.6);
+}
 
 
 
