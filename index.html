@@ -44,65 +44,141 @@
                 turistas exploren la ciudad a su propio ritmo, de forma ecológica y divertida.</p>
         </section>
 
-        <section id="catalogo">
-            <h2>Tipos de bicicletas</h2>
-            <p>Conoce los diferentes modelos que tenemos disponibles para ti:</p>
+        
+<section id="catalogo">
+    <h2>Tipos de bicicletas</h2>
+    <p>Conoce los diferentes modelos que tenemos disponibles para ti:</p>
 
-            <!-- Bootstrap adapta el catálogo: 1 columna en celular, 2 en tablet y 3 en computador -->
-       <div class="galeria row g-4">
+   <div id="carruselBicis" class="carousel slide carrusel-bicis" aria-label="Catálogo de bicicletas">
 
-    <div class="col-12 col-md-6 col-lg-4">
-        <article class="bici-card card h-100">
+    <div class="carousel-inner">
 
-            <div class="imagen-bici">
-                <img src="img/Bicilceta 1.webp"
-                     class="img-fluid"
-                     alt="Bicicleta de montaña GW color negro">
+        <!-- Diapositiva 1: bicicletas 1 a 3 -->
+        <div class="carousel-item active">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicilceta 1.webp" alt="Bicicleta de montaña GW color negro">
+                        </div>
+                        <h3>MTB GW Negra</h3>
+                        <p>Bicicleta de montaña con suspensión delantera, ideal para terreno variado y ciclovías exigentes.</p>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 2.webp" alt="Bicicleta de montaña GW color beige">
+                        </div>
+                        <h3>MTB GW beige</h3>
+                        <p>Modelo todoterreno cómodo y elegante para pasear por la ciudad con total suavidad.</p>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 3.jpeg" alt="Bicicleta de ruta de color rojo y blanco">
+                        </div>
+                        <h3>Bicicleta de ruta con un estilo único</h3>
+                        <p>Diseñada para velocidad y alto rendimiento sobre el asfalto. Perfecta para deportistas.</p>
+                    </article>
+                </div>
+
             </div>
+        </div>
 
-            <h3>MTB GW Negra</h3>
+        <!-- Diapositiva 2: bicicletas 4 a 6 -->
+        <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
 
-            <p>Bicicleta de montaña con suspensión delantera, ideal para terreno variado y ciclovías exigentes.</p>
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 4.webp" alt="Bicicleta de montaña color plateada">
+                        </div>
+                        <h3>Bicicleta de montaña plateada</h3>
+                        <p>Bicicleta de montaña con extra traccion, ideal para caminos empinados.</p>
+                    </article>
+                </div>
 
-        </article>
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 5.png" alt="Bicicleta de montaña con tonos verdes">
+                        </div>
+                        <h3>Bicicleta de montaña con tonos verdes</h3>
+                        <p>Modelo todoterreno cómodo y elegante para pasear por la montañas de manera agil.</p>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 6.jpg" alt="Bicicleta  color rojo y blanco">
+                        </div>
+                        <h3>Bicicleta  color rojo y blanco</h3>
+                        <p>Diseñada para velocidad. Perfecta para deportistas y amantes de la adrenalina.</p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Diapositiva 3: bicicletas 7 a 9 -->
+        <div class="carousel-item">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 7.jpeg" alt="Bicicleta stunt simple">
+                        </div>
+                        <h3>Bicicleta stunt simple</h3>
+                        <p>Bicicleta de stunt simple para maniobras, ideal para quienes les gusta hacer acrobacias.</p>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 8.webp" alt="Bicicleta de stunt avanzado">
+                        </div>
+                        <h3>Bicicleta de stunt avanzado</h3>
+                        <p>Modelo de acrobacias elegante, de preferencia para quienes ya tienen dominio de acrobacias.</p>
+                    </article>
+                </div>
+
+                <div class="col">
+                    <article class="bici-card card h-100">
+                        <div class="imagen-bici">
+                            <img src="img/Bicicleta 9.jpeg" alt="Bicicleta de montaña negra">
+                        </div>
+                        <h3>Bicicleta de montaña negra</h3>
+                        <p>Diseñada para las montañas mas fuertas, posee traccion extra y ruedas super resistentes.</p>
+                    </article>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
-    <div class="col-12 col-md-6 col-lg-4">
-        <article class="bici-card card h-100">
-
-            <div class="imagen-bici">
-                <img src="img/Bicicleta 2.webp"
-                     class="img-fluid"
-                     alt="Bicicleta de montaña GW color beige">
-            </div>
-
-            <h3>MTB GW beige</h3>
-
-            <p>Modelo todoterreno cómodo y elegante para pasear por la ciudad con total suavidad.</p>
-
-        </article>
-    </div>
-
-    <div class="col-12 col-md-6 col-lg-4">
-        <article class="bici-card card h-100">
-
-            <div class="imagen-bici">
-                <img src="img/Bicicleta 3.jpeg"
-                     class="img-fluid"
-                     alt="Bicicleta de ruta de color rojo y blanco">
-            </div>
-
-            <h3>Bicicleta de ruta con un estilo único</h3>
-
-            <p>Diseñada para velocidad y alto rendimiento sobre el asfalto. Perfecta para deportistas.</p>
-
-        </article>
-    </div>
+    <!-- Flechas -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carruselBicis" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carruselBicis" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+    </button>
 
 </div>
+</section>
 
-
-        </section>
 
         <section id="tarifas">
             <h2>Nuestras tarifas</h2>
