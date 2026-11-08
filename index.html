@@ -16,9 +16,6 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 </head>
-
-
-
 <body>
 
     <header id="inicio" class="encabezado">
@@ -27,8 +24,6 @@
     </header>
 
     <nav class="menu-principal" aria-label="Navegación principal">
-        
-        
         
         <ul>
             <li><a href="#inicio">Inicio</a></li>
@@ -46,7 +41,11 @@
             <h2>Quiénes somos</h2>
             <p>En <strong>Rueda Libre</strong> somos apasionados por la movilidad sostenible en Medellín. 
                 Ofrecemos el servicio de alquiler de bicicletas urbanas, de montaña y de ruta para que locales y 
-                turistas exploren la ciudad a su propio ritmo, de forma ecológica y divertida.</p>
+                turistas exploren la ciudad a su propio ritmo, de forma ecológica y divertida. Nuestros horarios
+                 son de lunes a viernes de 7:00 am hasta 10:00 pm, sabados, somingos y festivos hasta  las 9:30 pm
+                por lo que no se puede hacer el paseo de noche completo, poseemos una gran variedad de bicicletas 
+                cada una adaptada a diferentes necesidades algunas mas deposrtivas y otras mas acrobaticas dependiendo
+                de lo que el cliente busque. </p>
         </section>
 
         
@@ -185,20 +184,134 @@
 </section>
 
 
-        <section id="tarifas">
-            <h2>Nuestras tarifas</h2>
-            <p>Elige el plan que mejor se adapte a tu recorrido:</p>
-            <ul class="lista-tarifas">
-                <li><strong>Hora adicional:</strong> $10.000 COP</li>
-                <li><strong>Medio día (4 horas):</strong> $30.000 COP</li>
-                <li><strong>Día completo (8 horas):</strong> $50.000 COP</li>
-            </ul>
-        </section>
+       
+<section id="tarifas">
 
-        <section id="reserva">
-            <h2>Reserva tu bicicleta</h2>
-            <p>Completa tus datos para solicitar el alquiler de tu bicicleta.</p>
+    <h2>Nuestras tarifas</h2>
+    <p>Encuentra el plan ideal para disfrutar Medellín sobre dos ruedas.</p>
 
+    <!-- TARIFAS DIURNAS -->
+    <div class="bloque-tarifas">
+
+        <h3 class="titulo-tarifa">☀️ Alquiler diurno</h3>
+        <p class="descripcion-tarifa">
+            Disfruta de la ciudad y sus paisajes durante el día.
+        </p>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <article class="tarjeta-tarifa h-100">
+                    <h4>Medio día</h4>
+                    <p class="duracion-tarifa">4 horas de alquiler</p>
+
+                    <div class="precio-tarifa">
+                        $30.000
+                        <span>COP</span>
+                    </div>
+
+                    <p class="hora-adicional">
+                        Hora adicional: <strong>$10.000 COP</strong>
+                    </p>
+
+                    <ul class="condiciones-tarifa">
+                        <li>Uso de bicicleta durante 4 horas.</li>
+                        <li>Horario diurno acordado al reservar.</li>
+                        <li>Sujeto a disponibilidad.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="tarjeta-tarifa h-100">
+                    <h4>Día completo</h4>
+                    <p class="duracion-tarifa">8 horas de alquiler</p>
+
+                    <div class="precio-tarifa">
+                        $50.000
+                        <span>COP</span>
+                    </div>
+
+                    <p class="hora-adicional">
+                        Hora adicional: <strong>$10.000 COP</strong>
+                    </p>
+
+                    <ul class="condiciones-tarifa">
+                        <li>Uso de bicicleta durante 8 horas.</li>
+                        <li>Horario diurno acordado al reservar.</li>
+                        <li>Sujeto a disponibilidad.</li>
+                    </ul>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- TARIFAS NOCTURNAS -->
+    <div class="bloque-tarifas">
+
+        <h3 class="titulo-tarifa">🌙 Alquiler nocturno</h3>
+        <p class="descripcion-tarifa">
+            Explora Medellín y disfruta de sus recorridos nocturnos.
+        </p>
+
+        <div class="row g-4">
+
+            <div class="col-12 col-md-6">
+                <article class="tarjeta-tarifa tarjeta-nocturna h-100">
+                    <h4>Noche corta</h4>
+                    <p class="duracion-tarifa">4 horas de alquiler</p>
+
+                    <div class="precio-tarifa">
+                        $35.000
+                        <span>Tarifa</span>
+                    </div>
+
+                    <p class="hora-adicional">
+                        Hora adicional: <strong>$15.000</strong>
+                    </p>
+
+                    <ul class="condiciones-tarifa">
+                        <li>Uso de bicicleta durante 4 horas.</li>
+                        <li>Horario nocturno sujeto a coordinación.</li>
+                        <li>Reserva previa y disponibilidad.</li>
+                    </ul>
+                </article>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <article class="tarjeta-tarifa tarjeta-nocturna h-100">
+                    <h4>Noche extendida</h4>
+                    <p class="duracion-tarifa">8 horas de alquiler</p>
+
+                    <div class="precio-tarifa">
+                        $55.000
+                        <span>Tarifa</span>
+                    </div>
+
+                    <p class="hora-adicional">
+                        Hora adicional: <strong>$15.000</strong>
+                    </p>
+
+                    <ul class="condiciones-tarifa">
+                        <li>Uso de bicicleta durante 8 horas.</li>
+                        <li>Horario nocturno sujeto a coordinación.</li>
+                        <li>Reserva previa y disponibilidad.</li>
+                    </ul>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <p class="nota-tarifas">
+        Los alquileres están sujetos a disponibilidad.
+        Consulta las condiciones y horarios al realizar tu reserva.
+    </p>
+
+</section>
+
+</section>
 <div class="text-center mb-4">
     <button class="btn btn-success"
             type="button"
