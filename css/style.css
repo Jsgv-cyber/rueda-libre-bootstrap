@@ -65,8 +65,6 @@ p { text-align: center; }
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
 }
 
-
-
 .menu-principal ul {
     display: flex;
     justify-content: center;
@@ -299,6 +297,137 @@ footer p { margin: 0; }
 .carrusel-bicis .carousel-control-prev:hover .carousel-control-prev-icon,
 .carrusel-bicis .carousel-control-next:hover .carousel-control-next-icon {
     filter: brightness(0.6);
+}
+
+/* =========================================
+   TARJETAS DE TARIFAS DIURNAS Y NOCTURNAS
+========================================= */
+
+.bloque-tarifas {
+    margin-top: 35px;
+}
+
+.titulo-tarifa {
+    color: var(--verde-principal);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+.descripcion-tarifa {
+    color: #526257;
+    margin-bottom: 24px;
+}
+
+/* Tarjetas */
+
+.tarjeta-tarifa {
+    padding: 25px 20px;
+    background-color: var(--blanco);
+    border: 1px solid #d5dfd6;
+    border-top: 5px solid var(--verde-principal);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tarjeta-tarifa:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 16px rgba(0, 0, 0, 0.12);
+}
+
+.tarjeta-tarifa h4 {
+    color: var(--verde-principal);
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.duracion-tarifa {
+    color: #65736a;
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+}
+
+/* Precio destacado */
+
+.precio-tarifa {
+    color: var(--verde-principal);
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0 5px;
+}
+
+.precio-tarifa span {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: normal;
+    color: #65736a;
+}
+
+/* Hora adicional */
+
+.hora-adicional {
+    padding: 10px;
+    margin: 12px 0 20px;
+    background-color: var(--verde-claro);
+    border-radius: 7px;
+    font-size: 0.9rem;
+}
+
+/* Condiciones */
+
+.condiciones-tarifa {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.condiciones-tarifa li {
+    padding: 9px 0;
+    border-top: 1px solid #e5ebe5;
+    font-size: 0.9rem;
+}
+
+.condiciones-tarifa li::before {
+    content: "✓";
+    color: var(--verde-principal);
+    font-weight: bold;
+    margin-right: 9px;
+}
+
+/* Diferenciación nocturna */
+
+.tarjeta-nocturna {
+    border-top-color: #526b91;
+}
+
+.tarjeta-nocturna h4,
+.tarjeta-nocturna .precio-tarifa {
+    color: #405b80;
+}
+
+.tarjeta-nocturna .hora-adicional {
+    background-color: #e9edf4;
+}
+
+.tarjeta-nocturna .condiciones-tarifa li::before {
+    color: #526b91;
+}
+
+/* Nota inferior */
+
+.nota-tarifas {
+    max-width: 750px;
+    margin: 30px auto 5px;
+    padding: 14px;
+    background-color: var(--verde-claro);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: var(--texto);
 }
 
 
