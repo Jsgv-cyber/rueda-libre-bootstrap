@@ -53,6 +53,40 @@ p { text-align: center; }
 
 .encabezado p { margin: 0; }
 
+/* Botón de modo noche en la esquina superior derecha */
+.tema-toggle {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    padding: 9px 15px;
+    border: 1px solid var(--blanco);
+    border-radius: 8px;
+    background-color: transparent;
+    color: var(--blanco);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.tema-toggle:hover {
+    background-color: var(--verde-hover);
+}
+
+/* Adaptación del botón para celulares */
+@media (max-width: 575.98px) {
+    .encabezado {
+        padding-top: 65px;
+    }
+
+    .tema-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 7px 10px;
+        font-size: 12px;
+    }
+}
+
+
 /* =========================================
    4. MENÚ DE NAVEGACIÓN RESPONSIVE
 ========================================= */
@@ -432,5 +466,221 @@ footer p { margin: 0; }
 
 
 
+/* =========================================
+   MODO NOCHE - COLORES Y CONTRASTE
+========================================= */
 
+body.modo-noche {
+    --fondo: #121a16;
+    --texto: #e4ebe5;
+    --verde-principal: #65b985;
+    --verde-oscuro: #101a14;
+    --verde-hover: #367653;
+    --verde-claro: #263b2d;
 
+    --bs-body-bg: #121a16;
+    --bs-body-color: #e4ebe5;
+    --bs-secondary-bg: #1a251e;
+    --bs-tertiary-bg: #202b24;
+    --bs-border-color: #405347;
+    --bs-card-bg: #202b24;
+    --bs-card-color: #e4ebe5;
+
+    background-color: #121a16;
+    color: #e4ebe5;
+    color-scheme: dark;
+}
+
+/* Fondo general */
+body.modo-noche,
+body.modo-noche main {
+    background-color: #121a16;
+    color: #e4ebe5;
+}
+
+/* Todas las secciones */
+body.modo-noche main section {
+    background-color: #1a251e;
+    color: #e4ebe5;
+    border: 1px solid #2c4032;
+}
+
+/* Títulos */
+body.modo-noche h2,
+body.modo-noche h3 {
+    color: #75c995;
+}
+
+/* Textos y párrafos */
+body.modo-noche p,
+body.modo-noche label {
+    color: #e4ebe5;
+}
+
+/* Tarjetas de bicicletas */
+body.modo-noche .bici-card,
+body.modo-noche .card {
+    background-color: #202b24;
+    color: #e4ebe5;
+    border-color: #405347;
+}
+
+/* Títulos y descripciones de las bicicletas */
+body.modo-noche .bici-card h3 {
+    color: #75c995;
+}
+
+body.modo-noche .bici-card p {
+    color: #d5e1d8;
+}
+
+/* Fondo de las imágenes */
+body.modo-noche .imagen-bici {
+    background-color: #17221b;
+    border-color: #405347;
+}
+
+/* Tarifas */
+body.modo-noche .lista-tarifas li {
+    background-color: #202b24;
+    color: #e4ebe5;
+    border: 1px solid #405347;
+}
+
+/* Formulario */
+body.modo-noche .campo-formulario label {
+    color: #e4ebe5;
+}
+
+body.modo-noche .form-control,
+body.modo-noche .form-select {
+    background-color: #202b24;
+    color: #ffffff;
+    border-color: #526758;
+}
+
+body.modo-noche .form-control::placeholder {
+    color: #b9c9bd;
+}
+
+body.modo-noche .form-select option {
+    background-color: #202b24;
+    color: #ffffff;
+}
+
+body.modo-noche .form-control:focus,
+body.modo-noche .form-select:focus {
+    background-color: #202b24;
+    color: #ffffff;
+    border-color: #75c995;
+    box-shadow: 0 0 0 0.2rem rgba(117, 201, 149, 0.2);
+}
+
+/* Nota del formulario */
+body.modo-noche .nota-formulario {
+    color: #b9c9bd;
+}
+
+/* Carrusel */
+body.modo-noche .carousel-inner,
+body.modo-noche .carousel-item {
+    background-color: transparent;
+}
+
+body.modo-noche #carruselBicicletas .carousel-control-prev,
+body.modo-noche #carruselBicicletas .carousel-control-next {
+    background-color: #367653;
+}
+
+/* Pie de página */
+body.modo-noche footer {
+    background-color: #101a14;
+    color: #ffffff;
+}
+
+/* Transición de colores */
+body,
+body section,
+body .bici-card,
+body .lista-tarifas li,
+body .imagen-bici {
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* =========================================
+   AJUSTE DE TARIFAS EN MODO NOCHE
+========================================= */
+
+/* Tarjetas */
+body.modo-noche .tarjeta-tarifa {
+    background-color: #202b24;
+    border-color: #405347;
+    border-top-color: #65b985;
+    color: #e4ebe5;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* Títulos */
+body.modo-noche .tarjeta-tarifa h4 {
+    color: #8bd6a6;
+}
+
+/* Duración */
+body.modo-noche .duracion-tarifa {
+    color: #c2d1c6;
+}
+
+/* Precio */
+body.modo-noche .precio-tarifa {
+    color: #75c995;
+}
+
+body.modo-noche .precio-tarifa span {
+    color: #c2d1c6;
+}
+
+/* Hora adicional */
+body.modo-noche .tarjeta-tarifa .hora-adicional {
+    background-color: #263b2d;
+    color: #e4ebe5;
+}
+
+/* Condiciones */
+body.modo-noche .condiciones-tarifa li {
+    color: #d5e1d8;
+    border-top-color: #405347;
+}
+
+body.modo-noche .condiciones-tarifa li::before {
+    color: #8bd6a6;
+}
+
+/* Diferenciación de tarifas nocturnas */
+body.modo-noche .tarjeta-nocturna {
+    border-top-color: #7899c9;
+}
+
+body.modo-noche .tarjeta-nocturna h4,
+body.modo-noche .tarjeta-nocturna .precio-tarifa {
+    color: #a9c6f0;
+}
+
+body.modo-noche .tarjeta-nocturna .hora-adicional {
+    background-color: #29364a;
+    color: #e4ebf5;
+}
+
+body.modo-noche .tarjeta-nocturna .condiciones-tarifa li::before {
+    color: #a9c6f0;
+}
+
+/* Descripciones y nota inferior */
+body.modo-noche .descripcion-tarifa,
+body.modo-noche .nota-tarifas {
+    color: #d5e1d8;
+}
+
+body.modo-noche .nota-tarifas {
+    background-color: #263b2d;
+    border: 1px solid #405347;
+}
