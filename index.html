@@ -18,10 +18,20 @@
 </head>
 <body>
 
-    <header id="inicio" class="encabezado">
-        <h1>Rueda Libre | Alquiler de bicicletas en Medellín</h1>
-        <p>Tu mejor opción para recorrer la ciudad sobre dos ruedas</p>
-    </header>
+<header class="encabezado">
+    
+
+    <button id="botonTema" class="tema-toggle" type="button"
+            aria-label="Activar modo noche"
+            aria-pressed="false">
+        🌙 Modo noche
+    </button>
+
+    <h1>Rueda Libre</h1>
+    <p>Alquiler de bicicletas en Medellín</p>
+
+</header>
+
 
     <nav class="menu-principal" aria-label="Navegación principal">
         
@@ -64,7 +74,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicilceta 1.webp" alt="Bicicleta de montaña GW color negro">
+                            <img src="img/Bicilceta 1.png" alt="Bicicleta de montaña GW color negro">
                         </div>
                         <h3>MTB GW Negra</h3>
                         <p>Bicicleta de montaña con suspensión delantera, ideal para terreno variado y ciclovías exigentes.</p>
@@ -74,7 +84,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 2.webp" alt="Bicicleta de montaña GW color beige">
+                            <img src="img/Bicicleta 2.png" alt="Bicicleta de montaña GW color beige">
                         </div>
                         <h3>MTB GW beige</h3>
                         <p>Modelo todoterreno cómodo y elegante para pasear por la ciudad con total suavidad.</p>
@@ -84,7 +94,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 3.jpeg" alt="Bicicleta de ruta de color rojo y blanco">
+                            <img src="img/Bicicleta 3.png" alt="Bicicleta de ruta de color rojo y blanco">
                         </div>
                         <h3>Bicicleta de ruta con un estilo único</h3>
                         <p>Diseñada para velocidad y alto rendimiento sobre el asfalto. Perfecta para deportistas.</p>
@@ -101,7 +111,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 4.webp" alt="Bicicleta de montaña color plateada">
+                            <img src="img/Bicicleta 4.png" alt="Bicicleta de montaña color plateada">
                         </div>
                         <h3>Bicicleta de montaña plateada</h3>
                         <p>Bicicleta de montaña con extra traccion, ideal para caminos empinados.</p>
@@ -121,7 +131,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 6.jpg" alt="Bicicleta  color rojo y blanco">
+                            <img src="img/Bicicleta 6.png" alt="Bicicleta  color rojo y blanco">
                         </div>
                         <h3>Bicicleta  color rojo y blanco</h3>
                         <p>Diseñada para velocidad. Perfecta para deportistas y amantes de la adrenalina.</p>
@@ -138,7 +148,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 7.jpeg" alt="Bicicleta stunt simple">
+                            <img src="img/Bicicleta 7.png" alt="Bicicleta stunt simple">
                         </div>
                         <h3>Bicicleta stunt simple</h3>
                         <p>Bicicleta de stunt simple para maniobras, ideal para quienes les gusta hacer acrobacias.</p>
@@ -148,7 +158,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 8.webp" alt="Bicicleta de stunt avanzado">
+                            <img src="img/Bicicleta 8.png" alt="Bicicleta de stunt avanzado">
                         </div>
                         <h3>Bicicleta de stunt avanzado</h3>
                         <p>Modelo de acrobacias elegante, de preferencia para quienes ya tienen dominio de acrobacias.</p>
@@ -158,7 +168,7 @@
                 <div class="col">
                     <article class="bici-card card h-100">
                         <div class="imagen-bici">
-                            <img src="img/Bicicleta 9.jpeg" alt="Bicicleta de montaña negra">
+                            <img src="img/Bicicleta 9.png" alt="Bicicleta de montaña negra">
                         </div>
                         <h3>Bicicleta de montaña negra</h3>
                         <p>Diseñada para las montañas mas fuertas, posee traccion extra y ruedas super resistentes.</p>
@@ -395,6 +405,51 @@
         <p>&copy; 2026 Rueda Libre | Medellín, Colombia</p>
     </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+ 
+<script>
+    // Aquí irá el código JavaScript del modo noche
 
+const botonTema = document.getElementById("botonTema");
+
+// Recuperar el tema guardado
+const temaGuardado = localStorage.getItem("tema");
+
+if (temaGuardado === "oscuro") {
+    document.body.classList.add("modo-noche");
+}
+
+// Actualizar el botón
+function actualizarBotonTema() {
+    const modoNocheActivo = document.body.classList.contains("modo-noche");
+
+    botonTema.textContent = modoNocheActivo
+        ? "☀️ Modo día"
+        : "🌙 Modo noche";
+
+    botonTema.setAttribute("aria-pressed", modoNocheActivo);
+    botonTema.setAttribute(
+        "aria-label",
+        modoNocheActivo ? "Activar modo día" : "Activar modo noche"
+    );
+}
+
+actualizarBotonTema();
+
+// Cambiar el tema al pulsar
+botonTema.addEventListener("click", function () {
+
+    document.body.classList.toggle("modo-noche");
+
+    const modoNocheActivo = document.body.classList.contains("modo-noche");
+
+    localStorage.setItem(
+        "tema",
+        modoNocheActivo ? "oscuro" : "claro"
+    );
+
+    actualizarBotonTema();
+});
+
+</script>
 </body>
 </html>
